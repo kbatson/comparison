@@ -1,0 +1,72 @@
+<html>
+<head>
+  <title>Testbed</title>
+  <style type="text/css">
+	  .compareContainer {
+		  width: 500px;
+		  height: 333px;
+		  background: lightgray;
+		  position: relative;
+	  }
+	  
+	  .compareImages {
+		  height: 100%;
+		  width: 100%;
+	  }
+
+	  .compareLeft {
+		  width: 50%;
+		  position: absolute;
+		  top: left;
+		  overflow: hidden;
+	  }
+	  
+	  .controlsContainer {
+		  display: block;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  z-index: 1;
+	  }
+	  
+	  .controlsHandle {
+		  background: black;
+		  height: 20px;
+		  width: 20px;
+		  margin-left: -10px;
+		  margin-top: -10px;
+		  border: none;
+		  border-radius: 10px;
+		  text-indent: -999em;
+		  border: 1px solid white;
+		  box-sizing: border-box;
+	  }
+	  
+	  .controlsHandle:active {
+		  background: rgba(96, 159, 230, 0.6);
+	  }
+	  
+	  .controlsDivider {
+		  display: block;
+		  height: 100%;
+		  background: white;
+		  width: 1px;
+		  position: absolute;
+		  top: 0;
+		  left: 50%;
+		  border-left: 1px solid black;
+		  border-right: 1px solid black;
+		  margin-left: -2px;
+	  }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="comparison.js"></script>
+</head>
+<body>
+  <div class="compareContainer">
+	  <img src="compare1.jpg" width="500" height="333" />
+	  <img src="compare2.jpg" width="500" height="333" />
+  </div>
+  <p id="display"></p>
+</body>
+</html>
