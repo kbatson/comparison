@@ -58,6 +58,15 @@
 		  border-right: 1px solid black;
 		  margin-left: -2px;
 	  }
+	  
+	  .display {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  color: white;
+		  padding: .5em;
+		  margin: 0;
+	  }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="comparison.js"></script>
@@ -67,6 +76,9 @@
 	  <img src="compare1.jpg" width="500" height="333" />
 	  <img src="compare2.jpg" width="500" height="333" />
   </div>
-  <p id="display"></p>
+  <div class="compareContainer">
+	  <img src="compare1.jpg" width="500" height="333" />
+	  <img src="compare2.jpg" width="500" height="333" />
+  </div>
 </body>
 </html>
