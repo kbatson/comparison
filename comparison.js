@@ -40,6 +40,7 @@ $(document).ready(function(){
 		
 		$(element).find('.controlsHandle').on('mousedown', function(event){
 			redrawInterval = setInterval(function(){
+				$(element).addClass('dragging');
 				if(comparePosition[index] < containerWidth && comparePosition[index] > 0){
 					$(element).find('.compareLeft').width(comparePosition[index]);
 					$(element).find('.controlsContainer, .controlsDivider').css('left',comparePosition[index]);
@@ -47,6 +48,7 @@ $(document).ready(function(){
 			}, 50);	
 		}).on('mouseup', function(event){
 			clearInterval(redrawInterval);
+			$(this).removeClass('dragging');
 		});
 	});
 	

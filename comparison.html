@@ -44,6 +44,7 @@
 		  text-indent: -999em;
 		  border: 1px solid white;
 		  box-sizing: border-box;
+		  cursor: col-resize;
 	  }
 	  
 	  .compareContainer .controlsHandle:active {
@@ -70,6 +71,10 @@
 		  color: white;
 		  padding: .5em;
 		  margin: 0;
+	  }
+	  
+	  .compareContainer.dragging {
+		  cursor: col-resize;
 	  }
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
