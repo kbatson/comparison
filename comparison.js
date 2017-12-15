@@ -9,7 +9,7 @@ $(document).ready(function(){
 		redrawInterval;
 	
 	//Generate DOM elements needed
-	var createElements = function(){
+	function createElements(){
 		controlsContainer = $('<div class="controlsContainer"></div>').appendTo(compareContainer);
 		controlsDivider = $('<div class="controlsDivider"></div>').appendTo(compareContainer);
 		controlsHandle = $('<button class="controlsHandle">Handle</button>').appendTo(controlsContainer);
