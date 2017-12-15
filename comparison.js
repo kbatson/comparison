@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var debug = true;
+	var debug = false; //Turns on display of mouse position data
 	var comparePosition = {}; //Object to hold each comparison value
 	var containerWidth = $('.compareContainer').width();
 	var compareContainer = $('.compareContainer');
@@ -7,13 +7,13 @@ $(document).ready(function(){
 		controlsDivider,
 		controlsHandle,
 		redrawInterval;
-	var createControls = function(){
+	
+	//Generate DOM elements needed
+	var createElements = function(){
 		controlsContainer = $('<div class="controlsContainer"></div>').appendTo(compareContainer);
 		controlsDivider = $('<div class="controlsDivider"></div>').appendTo(compareContainer);
 		controlsHandle = $('<button class="controlsHandle">Handle</button>').appendTo(controlsContainer);
-	}
-	
-	var createElements = function(){
+		
 		$(compareContainer).each(function(){
 			$(this).find('img').each(function(index){
 				$(this).wrap('<div class="compareImages"></div>');
@@ -28,7 +28,7 @@ $(document).ready(function(){
 			});
 		}
 	}
-	createControls();
+
 	createElements();
 	
 	$('.compareContainer').each(function(index, element){
