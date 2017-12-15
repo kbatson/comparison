@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	var comparePosition = 0;
-	var updatePosition = false;
 	var containerWidth = $('.compareContainer').width();
 	var compareContainer = $('.compareContainer');
 	var controlsContainer, controlsDivider, controlsHandle;
@@ -22,14 +21,13 @@ $(document).ready(function(){
 	createElements();
 	
 	$('.compareContainer').mousemove(function(e){
-		comparePosition = e.pageX;
+		comparePosition = e.pageX; //Need to isolate this to specific dimensions
 	    $('#display').html("X Axis : " + e.pageX + " Y Axis : " + e.pageY + " comparePosition: " + comparePosition);
 	});
 	
 	var int00;
 	$('.controlsHandle').on('mousedown', function(event){
 		int00 = setInterval(function(){
-			//updateWidth();
 			if(comparePosition < containerWidth && comparePosition > 0){
 				$('.compareLeft').width(comparePosition);
 				$('.controlsContainer, .controlsDivider').css('left',comparePosition);
